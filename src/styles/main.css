@@ -1,0 +1,192 @@
+/* Define o cursor padrão para o corpo da página */
+body {
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+  }
+  
+  /* Estiliza o player de áudio com tamanho fixo e uma transição suave */
+  #audio-player {
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s;
+  }
+  
+  /* Aplica um efeito de zoom ao passar o cursor sobre o player de áudio */
+  #audio-player:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Define a opacidade total para elementos ativos */
+  .active {
+    opacity: 1;
+  }
+  
+  /* Define uma opacidade reduzida para elementos inativos */
+  .inactive {
+    opacity: 0.3;
+  }
+  
+  /* Configura um cursor especial para botões, imagens e links, com uma versão destacada */
+  button,
+  button:hover,
+  img:hover,
+  a,
+  a:hover {
+    cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+  }
+  
+  /* Configura o contêiner para o vídeo de fundo */
+  .bg-video {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Define o vídeo de fundo com altura total da tela */
+  .bg-video .video {
+    height: 100vh;
+  }
+  
+  /* Aplica um gradiente sobre o vídeo de fundo */
+  .bg-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg,
+        rgba(0, 0, 0, 100) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(0, 0, 0, 100) 100%);
+  }
+  
+  /* Configura o contêiner principal com layout flexível */
+  .container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Configura a seção esquerda do contêiner */
+  .container__left {
+    width: 35%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Configura a seção direita do contêiner */
+  .container__right {
+    width: 65%;
+  }
+  
+  /* Estiliza a caixa de pontuação */
+  .score_box {
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Adiciona uma moldura ao redor de elementos */
+  .frame {
+    border: 3px solid #000;
+    border-radius: 5px;
+  }
+  
+  /* Configura a área de detalhes das cartas */
+  .card_details {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    width: 100%;
+  }
+  
+  /* Define o tamanho da fonte para o nome da carta */
+  #card-name {
+    font-size: 0.8rem;
+  }
+  
+  /* Define o tamanho da fonte para o tipo da carta */
+  #card-type {
+    font-size: 1rem;
+  }
+  
+  /* Configura o contêiner principal das cartas */
+  .card-box__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.3rem;
+  }
+  
+  /* Configura o contêiner para as cartas em modo de duelo */
+  .card-versus__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.3rem;
+    height: 300px;
+    align-items: center;
+  }
+  
+  /* Define o layout para a parte superior e inferior do modo de duelo */
+  .versus-top,
+  .versus-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Adiciona uma margem superior à parte inferior do modo de duelo */
+  .versus-bottom {
+    margin-top: 1rem;
+  }
+  
+  /* Oculta o botão para o próximo duelo inicialmente */
+  #next-duel {
+    display: none;
+  }
+  
+  /* Configura a área de exibição das cartas */
+  .card-box {
+    height: 9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  /* Estiliza as cartas no campo */
+  .card-infield {
+    height: 11.2rem;
+    width: 8rem;
+    border: 1px solid #fff;
+    border-radius: 8px;
+  }
+  
+  /* Adiciona uma transição suave às cartas */
+  .card {
+    transition: all 0.2s;
+  }
+  
+  /* Aplica um efeito de zoom ao passar o cursor sobre as cartas */
+  .card:hover {
+    transform: scale(1.2);
+  }
+  
